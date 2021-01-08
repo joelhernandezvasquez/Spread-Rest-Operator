@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+        // OBJECT DESTRUCTURING
+
+        const note = {
+                id: 1,
+                title: 'My first note',
+                date: '01/01/1970',
+            }
+
+            /* const id = note.id;
+            const title = note.title;
+            const date = note.date; */
+
+
+           // NOW USING DESTRUCTURING
+           const {id,title,date} = note;
+           console.log(id)
+
+           // ANOTHER EXAMPLE
+           const person = {
+                firstName: 'Zell',
+                lastName: 'Liew'
+            }
+
+            const {firstName,lastName} = person  // destructuring
+
+            console.log(`${firstName} ${lastName}`);
+
+            const numbers = [22, 99, 100]
+            const[firstNumber,SecondNumber] = numbers;
+            console.log(firstNumber);
+            console.log(SecondNumber);
+   
+   </script>
+</body>
+</html>
