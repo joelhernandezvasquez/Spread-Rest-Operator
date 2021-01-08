@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+</head>
+<body>
+    
+    <script>
+        // EXAMPLE A
+        const array = [1, 2, 3];
+
+        array.forEach((element)=>{
+           console.log(element) 
+        });
+
+        // NOW USING SPREAD OPERATOR
+        console.log(...array);
+
+
+       // EXAMPLE B
+        function logNames(firstName,middleName,lastName)
+        {
+          console.log(firstName);
+          console.log(middleName);
+          console.log(lastName);
+        }
+
+       const names = ['Zell', 'Thomas', 'Jacin'];
+
+       logNames(names[0],names[1],names[2]);
+
+       // NOW USING SPREAD OPERATOR
+       logNames(...names);
+
+
+      // EXAMPLE C
+
+       // Spreading arrays into arrays
+        const array2 = [...names]
+
+        console.log(array2) 
+
+
+        //EXAMPLE D APPENDING NEW ELEMENTS TO THE ARRAY
+        let numberStore = [0, 1, 2];
+        let newNumber = 12;
+
+        numberStore = [...numberStore,newNumber];
+        console.log(numberStore);
+
+        // EXAMPLE E COMBINING TWO ARRAY
+        const firstArray = [0, 1]
+        const secondArray = [2, 3]
+
+        const combinedArray = [...firstArray,...secondArray];
+        console.log(combinedArray);
+
+
+        // SPREAD OPERATOR IN OBJECT
+
+        const foo = {
+        english: 'hello',
+        french: 'bonjour',
+        japanese: 'konnichiwa'
+        };
+
+        const bar = {
+        german: 'gutentag',
+        canadian: 'hello-ey'
+        };
+       
+        const baz = {...foo,...bar};
+         console.log(baz);
+
+
+         // ANOTHER SPREAD OPERATOR IN OBJECT
+         const fruitBlender = {
+            blendKiwi: true,
+            blendMango: true
+            }
+
+        const megaBlender ={
+            blendGuava: true,
+            ...fruitBlender
+        }
+
+        console.log(megaBlender);
+
+
+
+
+
+
+
+
+        
+
+    
+
+
+    </script>
+</body>
+</html>
